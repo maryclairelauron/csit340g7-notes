@@ -10,6 +10,7 @@ function NoteCard({title, body}) {
                 className= "mt-3 cursor-pointer text-[15px] font-normal text-[#b83f45] underline"
             >
                 Show More    
+            
             </button>
         </div>
     )
