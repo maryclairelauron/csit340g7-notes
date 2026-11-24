@@ -91,7 +91,7 @@ function Notes() {
                         placeholder="Search by title"
                         value={search}
                         onChange={(event) => setSearch(event.target.value)}
-                        className="h-[52px] w-full border border-[#e6e6e6] px-4 text-lg outline-none placeholder:text-black/40 placeholder:italic focus:border-[#cf7d7d]"
+                        className="h-13 w-full border border-[#e6e6e6] px-4 text-lg outline-none placeholder:text-black/40 placeholder:italic focus:border-[#cf7d7d]"
                     />
                 </div>
 
@@ -106,7 +106,7 @@ function Notes() {
                         value={form.title}
                         onChange={handleChange}
                         placeholder="Title"
-                        className="h-[52px] w-full border border-[#e6e6e6] px-4 text-lg outline-none placeholder:text-black/40 placeholder:italic focus:border-[#cf7d7d]"
+                        className="h-13 w-full border border-[#e6e6e6] px-4 text-lg outline-none placeholder:text-black/40 placeholder:italic focus:border-[#cf7d7d]"
                     />
 
                     <textarea
@@ -119,7 +119,7 @@ function Notes() {
 
                     <button
                         type="submit"
-                        className="h-[50px] cursor-pointer bg-[#b83f45] text-[17px] font-normal text-white hover:bg-[#a33439]"
+                        className="h-12.5 cursor-pointer bg-[#b83f45] text-[17px] font-normal text-white hover:bg-[#a33439]"
                     >
                         Add note
                     </button>
