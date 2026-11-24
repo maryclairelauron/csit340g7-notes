@@ -24,10 +24,10 @@ function Notes() {
     }, [notes])
 
     useEffect(() => {
-    setTimeout(() => {
-        localStorage.setItem('draft', JSON.stringify(form))
-        console.log('draft saved:', form.title)
-    }, 1000)
+        const id = setTimeout(() => {
+            localStorage.setItem('draft', JSON.stringify(form))
+        }, 1000)
+        return () => clearTimeout(id)
     }, [form])
 
     function handleChange(event) {
@@ -87,7 +87,7 @@ function Notes() {
                         value={form.title}
                         onChange={handleChange}
                         placeholder="Title"
-                        className="..."
+                        className="h-[52px] w-full border border-[#e6e6e6] px-4 text-lg outline-none placeholder:text-black/40 placeholder:italic focus:border-[#cf7d7d]"
                     />
 
                     <textarea
@@ -95,7 +95,7 @@ function Notes() {
                         value={form.body}
                         onChange={handleChange}
                         placeholder="Write your note"
-                        className="..."
+                        className="min-h-32 w-full border border-[#e6e6e6] px-4 py-3 text-lg outline-none placeholder:text-black/40 placeholder:italic focus:border-[#cf7d7d]"
                     />
 
                     <button
